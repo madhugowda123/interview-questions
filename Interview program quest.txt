@@ -1,0 +1,411 @@
+
+WEB SITES:==>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+===>HOW TO GET A FIRST CHARACTER IN A WORD IN THE SENTENCE USEING JAVASCRIPT?
+
+const sentence = "My name is Madhu";
+console.log(
+  sentence
+    .split(" ")
+    .map((splitWord) => splitWord.toLocaleLowerCase().charAt(0))
+    .join("")
+);
+
+OUTPUT=>mnim
+
+OR
+
+const sentence = "My name is Madhu";
+console.log(
+  sentence
+    .split(" ")
+    .map((splitWord) => splitWord.slice(0,1))
+    .join("")
+);
+
+OUTPUT=>mnim
+
+
+===>SORT ARRAY USEING LENGTH OF WORD IN INCREASING ORDER?
+
+ans=>
+var myFunction = "i madhu am gowda ks";
+	
+console.log(
+  myFunction
+    .split(" ")
+    .sort(function (a, b) {
+      return a.length - b.length;
+    })
+    .join(" ")
+);
+
+OUTPUT=>i am ks madhu gowda
+
+===>CONVERT NUMBER TO STRING AND STRING TO NUMBER IN ARRAY USEING Map( )
+ans=>
+const stringToNumber = new Map();
+stringToNumber.set("one", 1);
+stringToNumber.set("two", 2);
+stringToNumber.set("three", 3);
+stringToNumber.set("four", 4);
+stringToNumber.set("five", 5);
+console.log("shgtsd", stringToNumber);
+const numberToString = new Map();
+numberToString.set(1, "one");
+numberToString.set(2, "two");
+numberToString.set(3, "three");
+numberToString.set(4, "four");
+numberToString.set(5, "five");
+
+const myFunction = ["one", "four", "three", "five"];
+
+console.log(
+  myFunction
+    .map((number) => stringToNumber.get(number))
+    .sort()
+    .map((number) => numberToString.get(number))
+);
+
+OUTPUT=>[1, 3, 4, 5]
+['one', 'three', 'four', 'five']
+
+===>HOW JAVASCRIPT EXECUTE ASYNCHRONOUS(SETTIMEOUT) CODE FLOW OR CODE EXECUTION
+ans=>
+const solve = () => {
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => console.log("inside set timeout"), 0);
+    console.log("inside for");
+  }
+};
+solve();
+
+OUTPUT=>
+3 inside for
+3 inside set timeout
+
+===>DYNOMICALLY DISPLAYING LAST NUMBERS (ATM LAST NUMBERS)
+ans=>
+
+let num = "333";
+let arrNum = [...num];
+console.log("NUM  ", arrNum);
+
+let pattern = "**********";
+
+let star = [...pattern];
+let final = star.splice(star.length - arrNum.length, arrNum.length, ...arrNum);
+
+console.log("Pattern", star.join(" "));
+
+OUTPUT=>* * * * * * * 3 3 3
+
+===>ADDING ARRAY VALUE USEING REDUCER
+ans=>
+let arr = [1, 2, 3, 45, 6, 54, 3, 2];
+
+let x = arr.reduce((a, b) => a + b);
+console.log("ADDED VALUE", x);
+
+OUTPUT=>116
+
+===>REMOVEING DUPLICATE IN ARRAY USEING UNIQUE PROPERTY
+ans=>
+var subbu = [
+  { name: "madhu", email: "madhu@123" },
+  { name: "shwetha", email: "shwetha@123" },
+  { name: "shreya", email: "shwetha@123" },
+];
+
+const filterdArr = subbu.filter(
+  (value, index, self) =>
+    index === self.findIndex((t) => t.email === value.email)
+);
+console.log(filterdArr);
+
+OUTPUT=>
+[
+  { name: "madhu", email: "madhu@123" },
+  { name: "shwetha", email: "shwetha@123" },
+];
+
+//FINDING MID VALUE OF ARRAY
+
+let arr = [1, 23, 456, 78, 65, 73];
+
+function midValue(arr) {
+  if (arr.length % 2 === 0) {
+    let x = Math.floor(arr.length / 2);
+    let y = Math.floor(arr.length / 2 - 1);
+    let z = [arr[y], arr[x]];
+
+    return `two middle value:${z}`;
+  } else {
+    let x = Math.floor(arr.length / 2);
+
+    return arr[x];
+  }
+}
+console.log(midValue(arr));
+
+//FINDING DUPLICATE IN ARRAY
+
+var actualArr = ["Apple", "Apple", "Banana", "Mango", "Strawberry", "Banana"];
+
+console.log("Actual Array: " + actualArr);
+
+var filteredArr = actualArr.filter(function (item, index) {
+  if (actualArr.indexOf(item) === index) return item;
+});
+
+console.log("Filtered Array: " + filteredArr);
+
+
+//LISTING PRIME NUMBERS
+
+const arr = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+numArray = arr.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+
+OR
+
+var arr = "12";
+function MyFunction(num) {
+  for (var i = 2; i < num; i++) if (num % i === 0) return false;
+  return num > 1;
+}
+console.log(MyFunction(arr));
+
+//CAPITALIZE THE FIRST CHARACTER OF WORD IN SENTENCE
+
+var str = "hello madhu and shubham come to my office i need to talk with you";
+
+const newStr = str
+  .split(" ")
+  .map((toCapital) => toCapital.charAt(0).toUpperCase() + toCapital.slice(1))
+  .join(" ");
+
+console.log(newStr);
+
+//FINDING SECOND LARGEST OF ARRAY IF IN CASE OF DUPLICATE VALUES
+
+const array = [23, 67, 37, 37, 37, 487, 557, 557, 4];
+
+var newArray = array
+  .filter((item, index) => {
+    if (array.indexOf(item) === index) {
+      return item;
+    }
+  })
+  .sort((a, b) => a - b);
+
+console.log(newArray[newArray.length - 2]);
+
+//TO REPLACE THE STRING
+
+//i have a tiger and also lion
+const str = "i have a dog and also one cat";
+
+var changeValue = str.replace("dog", "tiger").replace("cat", "lion");
+console.log(changeValue);
+
+//TO CAPITALIZE LAST CHARACTER OF WORD IN SENTENCE
+
+var str = "hello madhu and shubham come to my office i need to talk with you";
+
+const newStr = str
+  .split(" ")
+  .map(
+    (toCapital) =>
+      toCapital.slice(toCapital, toCapital.length - 1) +
+      toCapital.charAt(toCapital.length - 1).toUpperCase()
+  )
+  .join(" ");
+
+console.log(newStr);
+
+//TO FIND MID VALUE OF WORD IN SENTENCE
+
+var str = "hello madhus gowdas";
+
+const newStr = str
+  .split(" ")
+  .map((newOne) => newOne.charAt(Math.floor(newOne.length / 2)))
+  .join(" ");
+console.log(newStr);
+
+//CONVERTING ARRAY TO OBJECT
+
+var arr = ["One", "Two", 3];
+var obj = { ...arr };
+console.log(obj);
+
+//CONVERT OBJECT TO ARRAY
+
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+const propertyNames = Object.keys(person);
+
+console.log(propertyNames);
+const propertyValues = Object.values(person);
+
+console.log(propertyValues);
+
+const entries = Object.entries(person);
+
+console.log(entries);
+
+//TO REMOVE KEY VALUE PAIRS IN OBJECT(delete thisIsObject.Cat)
+		
+var thisIsObject = {
+  Cow: "Moo",
+  Cat: "Meow",
+  Dog: "Bark",
+};
+
+console.log(delete thisIsObject.Cat);
+
+//HOW TO SORT STRINGS INSIDE ARRAY
+
+var arr = ["w", "r", "e", "a", "l"];
+
+const newArr = Array.from(arr).sort();
+
+console.log(newArr);
+
+//ODD AND EVEN
+
+var arr = "3";
+
+function findEvenOdd(num) {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+}
+
+console.log("RFTTR", findEvenOdd(arr));
+
+//LOOPING STRING USEING FOR OF LOOPING
+
+let str = "javascript";
+
+function reverse(str) {
+  var newVar = "";
+  for (var i = str.length - 1; i >= 0; i ) {
+    newVar = newVar + str[i];
+  }
+  return newVar;
+}
+
+console.log(reverse(str));
+
+
+//NAN(not a number) EXAMPLE
+
+let failedMath = Math.sqrt(-37);
+console.log(failedMath);
+let failedStringParse = parseInt("Operation Doomsday", 10);
+console.log(failedStringParse);
+
+OR
+
+function sanitise(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+console.log(sanitise("2"));
+// expected output: "1"
+
+
+//FINDING TWO LARGEST NUMBER IN ARRAY USEING FOR LOOP AND SORT
+
+//FOR LOOP
+let max = 0;
+let secondMax = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  if (max < arr[i]) {
+    max = arr[i];
+  }
+}
+for (let i = 0; i < arr.length; i++) {
+  if (secondMax < arr[i] && arr[i] !== max) {
+    secondMax = arr[i];
+  }
+}
+console.log(max, secondMax);
+
+//SORT
+const nnewArr = arr.sort();
+console.log(nnewArr[nnewArr.lengtharr - 1], nnewArr[length - 2]);
+
+//FILLING ARRAY FROM 1 to 100 NUMBERS
+
+console.log(Array.from(new Array(100), (_, index) => index + 1));
+
+
+//SORTING ARRAY USEING FOR LOOP
+
+
+var Arr = [56, 65, 76, 34, 98, 32, 0, 4, 6];
+
+for (let i = 0; i < Arr.length; i++)
+  for (let j = 0; j < i; j++)
+    if (Arr[i] < Arr[j]) {
+      var x = Arr[i];
+      Arr[i] = Arr[j];
+      Arr[j] = x;
+    }
+
+console.log(Arr);
+
+//MULTIPLAY NUMBERS IF SPACE AND ADD IF NUMBER
+	
+const string = "3 56 4 22";
+
+let newStr = string.split(" ");
+let mult = 1;
+for (let i = 0; i < newStr.length; i++) {
+  if (newStr[i].length > 1) {
+    let sum = 0;
+    for (let j = 0; j < newStr[i].length; j++) {
+      sum = sum + Number(newStr[i][j]);
+    }
+    mult = mult * sum;
+  } else {
+    mult = mult * newStr[i];
+  }
+}
+
+console.log(mult);
+
+//EXCHANGE VALUE OF STRING DYNOMICALLY
+
+
+var str1 = "HJHJHHH";
+var first = [str1[0]];
+str1.split("").map((value) => {
+  if (first.length < 2 && value !== str1[0]) {
+    first.push(value);
+  }
+});
+const newWord = str1
+  .split("")
+  .map((newLetter) => (newLetter === first[0] ? first[1] : first[0]))
+  .join("");
+console.log(newWord);
