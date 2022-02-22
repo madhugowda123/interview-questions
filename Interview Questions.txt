@@ -1,0 +1,683 @@
+////////////////////////////////////////////////interview Questions//////////////////////////////////////////////////////
+==========================WEBSITES===================================
+javascript interview questions===>
+https://www.interviewbit.com/javascript-interview-questions/
+interview questions===>
+https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions#basic_level__reactjs_interview_questions
+https://www.interviewbit.com/react-interview-questions/
+https://www.fullstack.cafe/blog/react-js-interview-questions
+redux===>
+https://dev.to/oahehc/redux-data-flow-and-react-component-life-cycle-11n
+hoc===>
+https://dev.to/codebucks/what-is-higher-order-component-hoc-in-react-2e1p
+github interview questions questions important===>
+https://github.com/sudheerj/reactjs-interview-questions#what-is-react
+ReactJS PROJECTS===>
+https://dev.to/thenerdydev/10-react-projects-every-beginner-should-try-fk9
+Calender in JS===>
+https://fullcalendar.io/
+
+==================================================================================================================
+
+===>Scope. Scope means variable access.(the range in the which variable can be access)
+ans=>Block scope :- Variables declared inside a { } block cannot be accessed from outside the block
+Function scope
+Global scope
+
+===>IIFE (Immediately Invoked Function Expression)
+ans=> As the name suggests IIFE is a function in javascript which immediately invoked and executed as soon as it is defined.
+ Variables declared within the IIFE cannot be accessed by the outside world and this way you can avoid global scope from getting polluted.
+ 
+===>Hoisting. 
+ans=>In JavaScript, Hoisting is the default behavior of moving all the declarations at the top of the scope before code execution. Basically,
+ it gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
+ 
+===>Closures. 
+ans=>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+ In other words, a closure gives you access to an outer function's scope from an inner function.
+  Now here you need to remember that the outer function can not have access to the inner function variable
+ 
+===>Callbacks. 
+ans=>a function passed into another function as an argument to be executed later.When you pass a callback function into another function,
+ you just pass the reference of the function i.e., the function name without the parentheses () .
+ 
+===>Promises. 
+ans=>Promises are a way to implement async programming in JavaScript(ES6). A Promise will become a container for future value.
+ Like if you order any food on any site to deliver it to your place that order record will be the promise and the food will be the value of that promise
+ 
+===>Async & Await.
+ans=>1. The word “async” before a function means one simple thing: a function always returns a promise.
+ 2. The keyword "await" makes JavaScript wait until that promise settles and returns its result.
+ 
+===>difference between undefine and null
+ans=>Many times we often get confused on what the difference between UNDEFINED and NULL is.Here as the variable is declared but not assigned to any value,
+ the variable by default is assigned a value of undefined. On the other hand, null is an object. It can be assigned to a variable as a representation of no value.
+ 
+===>difference between slice and splice
+ans=>The splice() method returns the removed items in an array. The slice() method returns the selected element(s) in an array, as a new array object.
+ The splice() method changes the original array and slice() method doesn't change the original array.
+
+===>difference between state and props?
+ans=>Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. 
+Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function. 
+
+===>Why should we not update the state directly?
+ans=>If you try to update the state directly then it won't re-render the component.use  setState() to update.
+ 
+===>what is A higher-order component (HOC) 
+ans=> (HOC) is the advanced technique in React.js for reusing a component logic.it is a function that takes a component as a parameter and returns a new component.
+ 
+===>what is Axios
+ans=>Axios is a Promised-based JavaScript library that is used to send HTTP requests. You can think of it as an alternative to JavaScript's native fetch() function.
+ We will be using features such as Promises, async/await , and other modern JavaScript design patterns 
+ 
+===>What is REST API used for?
+ans=>A RESTful API is an architectural style for an application program interface (API) that uses HTTP requests to access and use data. That data can be used to GET, PUT, POST and DELETE data types, 
+which refers to the reading, updating, creating and deleting of operations concerning resources.
+
+===>methods of axiosc call or api call or rest api
+ans=>GET,POST,PUT,DELETE(PATCH,COPY,HEAD,OPTIONS,LINK,UNLINK,PURGE,LOCK,UNLOCK,VIEW,PROPFIND)
+
+===>Synchronous and asynchronous in javascript
+ans=>Synchronous JavaScript: As the name suggests synchronous means to be in a sequence, i.e. every statement of the code gets executed one by one.
+ So, basically a statement has to wait for the earlier statement to get executed.
+ Asynchronous JavaScript: Asynchronous code allows the program to be executed immediately where the synchronous code will block further execution of the remaining code until it finishes the current one.
+ This may not look like a big problem but when you see it in a bigger picture you realize that it may lead to delaying the User Interface.
+ 
+===>What is setInterval and setTimeout?
+ans=>setTimeout(function, milliseconds ) Executes a function, after waiting a specified number of milliseconds.
+ setInterval(function, milliseconds ) Same as setTimeout(), but repeats the execution of the function continuously.
+ 
+===>try,catch,throw and finally
+ans=>The try statement lets you test a block of code for errors.
+The catch statement lets you handle the error.
+The throw statement lets you create custom errors.
+The finally statement lets you execute code, after try and catch, regardless of the result.
+
+===>what is callback chaining
+ans=>chain together a number of functions via callbacks (this is so the first function can use a non-blocking I/O call the other functions are dependent upon),
+while passing arguments (data) between them, and. without the existing functions having to be modified to be aware of their position in the callback chain. 
+ 
+===>variable and function hoisting
+ans=>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. 
+
+===>what is shallow copy and deep copy
+ans=> A SHALLOW copy means that certain (sub-)values are still connected to the original variable.
+A DEEP copy means that all of the values of the new variable are copied and disconnected from the original variable.
+
+===>How javascript create and read cookie
+ans=>JavaScript can create, read, and delete cookies with the DOCUMENT.COOKIE property.
+
+===>What is JSX(javascript extensible)
+ans=>JSX stands for JavaScript XML.
+It allows us to write HTML inside JavaScript 
+
+===>Difference Between controlled and uncontrolled components
+ans=>
+		Controlled Components(onChange)									Uncontrolled Components
+1. They do not maintain their own state					1. They maintain their own state
+2. Data is controlled by the parent component			2. Data is controlled by the DOM
+3. They take in the current values through
+ props and then notify the changes via callbacks	    3. Refs are used to get their current values
+
+===>What are the different lifecycle methods in React?
+ans=>Every component in React has lifecycle methods that we can tap into, to trigger changes at a particular phase of the life cycle.
+Each component in react goes through three phases: Mounting, Updating, and Unmounting.
+There are corresponding lifecycle methods for each of the three phases:
+Mounting:
+		1).constructor( ) 
+		=>The constructor() method is called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values
+		2).getDerivedStateFromProps( )
+		=>The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
+           This is the natural place to set the state object based on the initial props.
+           It takes state as an argument, and returns an object with changes to the state.
+		3).render( )
+		=>The render() method is required and will always be called, the others are optional and will be called if you define them.
+		  The render() method is required, and is the method that actually outputs the HTML to the DOM.
+		4).componentDidMount( )
+		=>The componentDidMount() method is called after the component is rendered.
+          This is where you run statements that requires that the component is already placed in the DOM.
+		  We can write bussiness logic in this phase only like setTimeout,setInterval.
+Updating:
+		1).getDerivedStateFromProps( )
+		2).shouldComponentUpdate( ) 
+		=>In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not.
+          The default value is true.
+		3).render( ) 
+		=>The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes.
+		4).getSnapshotBeforeUpdate( )
+		=>In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update.
+          If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error.
+		5).componentDidUpdate( ) 
+		=>The componentDidUpdate method is called after the component is updated in the DOM.to update state value red to yellow then we can use this method.
+Unmounting:
+		1).componentWillUnmount( )
+		=>The componentWillUnmount method is called when the component is about to be removed from the DOM.
+		
+===>Strict Mode in React.
+ans=>StrictMode is a tool added in the version 16.3 of React to highlight potential problems in an application. It performs additional checks on the application.
+
+===>What are the features  of  React?
+ans=>It uses the virtual DOM instead of the real DOM.
+It uses server-side rendering.
+It follows uni-directional data flow or data binding.
+
+===>what is client side rendering?
+ans=>Client-side rendering (CSR) means rendering pages directly in the browser using JavaScript.
+
+===>what is server side rendering?
+ans=>Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser.
+
+===> List some of the major advantages of React.
+ans=>It increases the application’s performance
+It can be conveniently used on the client as well as server side
+Because of JSX, code’s readability increases
+React is easy to integrate with other frameworks like Meteor, Angular, etc
+Using React, writing UI test cases become extremely easy
+
+===>What are the limitations of React?
+ans=>React is just a library, not a full-blown framework
+Its library is very large and takes time to understand
+It can be little difficult for the novice programmers to understand
+Coding gets complex as it uses inline templating and JSX
+
+===>What do you understand by Virtual DOM? Explain its working.
+ans=>Virtual DOM is a copy of real Dom
+1.Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+2.Then the difference between the previous DOM representation and the new one is calculated
+3.Once the calculations are done, the real DOM will be updated with only the things that have actually changed. 
+
+===>Why can’t browsers read JSX?
+ans=>Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, 
+first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
+
+===>How different is React’s ES6 syntax when compared to ES5?
+ans=>
+1.require vs import
+2.export vs exports
+3.component and function
+4.props
+5.state
+
+===>How is React different from Angular?
+ans=>
+TOPIC						REACT 						ANGULAR
+1. ARCHITECTURE		Only the View of MVC		Complete MVC
+2. RENDERING		Server-side rendering		Client-side rendering
+
+3. DOM	Uses 		virtual DOM					Uses real DOM
+4. DATA BINDING		One-way  data binding		Two-way data binding
+5. DEBUGGING		Compile time debugging		Runtime debugging
+6. AUTHOR			Facebook					Google
+
+===>What is Props?
+ans=>Props is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable.
+They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component.
+This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
+or
+Props are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes.
+They are data passed down from a parent component to a child component.
+
+===>What is a state in React and how is it used?
+ans=>States are the heart of React components. States are the source of data and must be kept as simple as possible i.e. mutable.
+State of a component is an object that holds some information that may change over the lifetime of the component. 
+
+===> How can you update the state of a component?
+ans=>classComponnet ==>this.setState()                                                                                                                                            
+functionalComponent ==>setState()
+
+===>What is arrow function in React JSX
+ans=>Arrow functions are more of brief syntax for writing the function expression. They are also called ‘fat arrow‘ (=>) the functions.
+
+===>What is an event in React?
+ans=>In React, events are the triggered reactions to specific actions like mouse hover, mouse click, key press, etc.
+
+===> What do you understand by refs in React?to create refs use(React.createRef())
+ans=>Refs is the short hand for References in React. It is an attribute which helps to store a reference to a particular React element or component,The ref is used to return a reference to the element.
+They should be avoided in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+
+===>What are Pure Components?
+ans=>ReactJS Pure Component Class compares current state and props with new props and states to decide whether the React component should re-render itself or Not. 
+In simple words, If the previous value of state or props and the new value of state or props is the same, the component will not re-render itself.
+
+===> Explain Flux?
+ans=>Flux is an architectural pattern which enforces the uni-directional data flow.
+ It controls derived data and enables communication between multiple components using a central Store.
+ 
+===>What is Redux?
+ans=>Redux is one of the most trending libraries for front-end development in today’s marketplace.
+ It is a predictable state container for JavaScript applications and is used for the entire applications state management.
+ Applications developed with Redux are easy to test and can run in different environments showing consistent behavior.
+ 
+===> List down the components of Redux.
+ans=>Redux is composed of the following components:
+
+1.Action – 
+ans=>It’s an object that describes what happened.
+Actions in React must have a type property that indicates the type of ACTION being performed.
+2.Reducer –  
+ans=>It is a place to determine how the state will change.
+Reducers are pure functions which specify how the application’s state changes in response to an ACTION.
+3.Store – 
+ans=>State/ Object tree of the entire application is saved in the Store.
+A store is a JavaScript object which can hold the application’s state and provide a few helper methods to access the state, dispatch actions and register listeners.
+4.View – 
+ans=>Simply displays the data provided by the Store.
+
+===>What is the DOM? 
+ans=>The Document Object Model (DOM) is a programming interface for web documents.
+it is a structured representation of the HTML elements that are present in a webpage
+
+===>When to use a Class Component over a Function Component?
+ans=>If the component needs state or lifecycle methods then use class component otherwise use function component.
+
+===>What is the purpose of callback function as an argument of setState()?
+ans=>The callback function is invoked when setState finished and the component gets rendered.
+Since setState() is asynchronous the callback function is used for any post action.
+
+===>What is the difference between HTML and React event handling?
+ans=>In HTML, the event name usually represents in lowercase as a convention:
+<button onclick='activateLasers()'>
+Whereas in React it follows camelCase convention:
+<button onClick={activateLasers}>
+
+===>How to bind methods or event handlers in JSX callbacks?
+ans=>
+Binding in Constructor: 
+Public class fields syntax
+Arrow functions in callbacks
+
+===>How to pass a parameter to an event handler or callback?
+ans=>You can use an arrow function to wrap around an event handler and pass parameters:
+<button onClick={() => this.handleClick(id)} />
+This is an equivalent to calling .bind:
+<button onClick={this.handleClick.bind(this, id)} />
+
+===>What are synthetic events in React?
+ans=>SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, 
+including stopPropagation() and preventDefault(), except the events work identically across all browsers.
+
+===>What are inline conditional expressions?
+ans=>You can use either if statements or ternary expressions which are available from JS to conditionally render expressions. 
+
+===>What is "key" prop and what is the benefit of using it in arrays of elements?
+ans=>A key is a special string attribute you should include when creating arrays of elements. Key prop helps React identify which items have changed, are added, or are removed.
+
+===>What is React Fiber?(React Fiber is an internal engine change that allows React to break the limits of the call stack)
+ans=>Fiber is the new reconciliation engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like 
+animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+
+===>What is context?
+ans=>Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+===>What is reconciliation?(Reconciliation is the process through which React updates the DOM)
+ans=>When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. 
+When they are not equal, React will update the DOM. This process is called reconciliation.
+
+===>What is the purpose of render method of react-dom? 
+ans=>This method is used to render a React element into the DOM in the supplied container and return a reference to the component. 
+If the React element was previously rendered into container, it will perform an update on it and only mutate the DOM as necessary to reflect the latest changes.
+ReactDOM.render(element, container[, callback])
+
+===>Difference between map and filter
+ans=>.filter() returns a subset of the elements from the original array, while .map() produces an array with new, different entries based on the elements in the original array.
+
+===>What are the different types of functions in JS?
+ans=>There are several ways to define functions:
+1.The function declaration ( function statement)
+2.The function expression ( function expression)
+3.The generator function declaration ( function* statement)
+4.The generator function expression ( function* expression)
+5.The arrow function expression (=>)
+6.The Function constructor.
+
+===>Few techniques to optimize React App Performance?
+ans=>
+1.using useMemo()
+2.React Pure Component
+3.maintaing state
+4.Lazy Loading
+=>lazy loading means that a component or a part of code must get loaded when it is required. It is also referred to as code splitting and data fetching . 
+Talking about React specifically, it bundles the complete code and deploys all of it at the same time.
+
+===>Difference between for in and for of in javascript?
+ans=>Both for..in and for..of are looping constructs which are used to iterate over data structures. The only difference between them is the entities they iterate over:
+for in:-iterates over all enumerable property keys of an object.
+for of:-iterates over the values of an iterable object.
+
+===>What is error boundries and uses in react?
+ans=>Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors,
+and display a fallback UI instead of the component tree
+ Error boundaries catch errors during rendering, in lifecycle methods, 
+and in constructors of the whole tree below them.
+
+===>why we use context api in react?
+ans=>The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or 
+moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.
+
+===>React Hooks(https://www.youtube.com/watch?v=TNhaISOUy6Q&ab_channel=Fireship)
+ans=>Hooks are the new feature introduced in the React 16.8 version. It allows you to use state and other React features without writing a class. 
+
+===>When to use a Hooks
+ans=>If you write a function component, and then you want to add some state to it, previously you do this by converting it to a class. 
+But, now you can do it by using a Hook inside the existing function component.
+
+===>Rules of Hooks
+ans=>1. Only call Hooks at the top level
+Do not call Hooks inside loops, conditions, or nested functions. Hooks should always be used at the top level of the React functions. 
+This rule ensures that Hooks are called in the same order each time a components renders.
+2. Only call Hooks from React functions
+You cannot call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function components. Hooks can also be called from custom Hooks.
+
+===>Built-in Hooks
+ans->Here, we describe the APIs for the built-in Hooks in React. The built-in Hooks can be divided into two parts, which are given below.
+
+=>Basic Hooks
+
+useState
+useEffect
+useContext
+
+=>Additional Hooks
+
+useReducer
+useCallback
+useMemo
+useRef
+useImperativeHandle
+useLayoutEffect
+useDebugValue
+
+===>why we need super() in class component?
+ans=>super(props) is a reference to the parents constructor() function.
+
+===>how  to call api in react?
+ans=>fetch(URL).then{}.catch{}
+
+===>What is the difference between the PUT method and the POST method?
+ans=>The difference between POST and PUT is that PUT is idempotent, that means, calling the same PUT request multiple times will always produce the same result
+(that is no side effect), while on the other hand, calling a POST request repeatedly may have (additional) side effects of creating the same resource multiple times.
+
+===>How to prevent re-renders in React?
+ans=>To prevent the re-rendering of child component, we use the shouldComponentUpdate( ) method:
+
+===>What are the different ways to style a React component?
+ans=>
+1.Inline Styling
+2.Using JavaScript object
+3.CSS Stylesheet
+4.CSS Modules
+
+===> How to pass data between react components?
+ans=>
+1.Parent Component to Child Component (using props)
+2.Child Component to Parent Component (using callbacks)
+
+===>What is prop drilling in React?
+ans=>Sometimes while developing React applications, there is a need to pass data from a component that is higher in the hierarchy to a component that is deeply nested.
+To pass data between such components, we pass props from a source component, and keep passing the prop to the next component in the hierarchy till we reach the deeply nested component.
+The disadvantage of using prop drilling is that the components that should otherwise be not aware of the data have access to the data.
+
+===>What is use of Redux in react JS?
+ans=>It allows React components to read data from a Redux Store, and dispatch Actions to the Store to update data.
+
+===>What is Babel in React?
+ans=>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
+
+===>What is code splitting?
+ans=>code splitting is the splitting of code into various bundles or components which can  be loaded on demand or in parallel.
+
+===>What is async function in React?
+ans=>An async function is a function declared with the async keyword, and the await keyword is permitted within them.
+
+===>How does diff algorithm work in React?
+ans=>The Diffing Algorithm. When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements.
+before dom update its compare two tree structures. 
+
+===>What is TSX in React?
+ans=>ts file for TypeScript, there is also a new file extension . tsx . This is the extension that you should use anytime you include the JSX syntax in a React component file. 
+You also need the jsx set to true which is done by default. TypeScript is able to compile JSX directly into JavaScript.
+
+===>Use of async and await in React JS?
+ans=>In summary, async/await is a cleaner syntax to write asynchronous Javascript code. 
+
+===>What is prototype in javascript?
+ans=>Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+All JavaScript objects inherit properties and methods from a prototype.
+
+===>difference between LET,VAR and CONST?
+ans=>1.Using VAR
+Variables defined with var have Functional Scope.
+Variables defined with var can be Redeclared.
+2.Using LET
+Variables defined with let cannot be Redeclared.
+Variables defined with let must be Declared before use.
+Variables defined with let have Block Scope.
+3.Using CONST
+The const keyword was introduced in ES6 (2015).
+Variables defined with const cannot be Redeclared.
+Variables defined with const cannot be Reassigned.
+Variables defined with const have Block Scope.
+
+===>What is Destructuring in JavaScript? 
+ans=>Destructuring is a JavaScript expression that allows us to extract data from arrays, objects, and maps and set them into new, distinct variables. 
+Destructuring allows us to extract multiple properties, or items, from an array​ at a time.
+
+===>What is spread operator in ES6?
+ans=>The spread operator is a feature of JavaScript introduced with ES6 that gives you access to the insides of an iterable object. ... Specifically: arrays, objects literals, and strings.
+
+===>What is this keyword in javascript?
+ans=>The JavaScript this keyword refers to the object it belongs to. It has different values depending on where it is used: 
+In a method, this refers to the owner object. 
+Alone, this refers to the global object. 
+In a function, this refers to the global object.
+
+===>what is dependency injection in react
+ans=>Dependency injection is a form of inversion of control. This means that a component's dependencies are not part of a component's internals, they are defined at the public-facing seam, 
+or interface, of the component. Dependency injection allows for a decoupled design and makes testing easier
+
+==>what is generator function in react?(ES6)
+ans=>A generator is a function that can stop midway and then continue from where it stopped. In short, a generator appears to be a function but it behaves like an iterator.
+
+===>what is Iterators in javascript?(ES6)
+ans=>Iterators are a new way to loop over any collection in JavaScript. 
+
+These are all iterables=>
+Arrays and TypedArrays
+Strings — iterate over each character or Unicode code-points.
+Maps — iterates over its key-value pairs
+Sets — iterates over their elements
+arguments — An array-like special variable in functions
+DOM elements (Work in Progress)
+
+===>Breaking Points of media query of CSS?
+ans=>/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+
+===>Box model in css?
+ans=>Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+
+===>React js Latest Version?
+ans=>17.0.2 / 22 March 2021
+
+===>What is useEffect and how it works?
+ans=>If you’re familiar with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+What does useEffect do? By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed.
+
+===>what is useState?
+ans=> useSatte() we are using to use state and maintain state in functional component.
+
+===>error handling with useing life cycle hooks in react?
+ans=>componentDidCatch(error, info)
+
+===>Redux Data Flow and React Component Life Cycl e?(https://dev.to/oahehc/redux-data-flow-and-react-component-life-cycle-11n)
+ans=>
+1.store is the place we save the state
+=>import { createStore } from "redux";
+import { reducer } from "./reduxModule";
+const store = createStore(reducer);
+
+2.getState is the method to get the state
+=>const state = store.getState();
+
+3.action & reducer is the method to change the mapStateToProps
+=>const INCREMENT = "redux/increment";
+const initialState = {
+  counter: 0,
+};
+export const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        counter: state.counter + action.amount
+      };
+    default:
+      return state;
+  }
+};
+export const incrementAction = (amount = 1) => {
+  return {
+    type: INCREMENT,
+    amount,
+  };
+};
+
+===>what is cookies in react?
+ans=>Cookies are the data stored in the form of key-value pairs that are used to store information about the user on their computer by the websites that the users browse and use it to verify them. 
+To set or remove the cookies, we are going to use a third-party dependency of react-cookie.
+
+===>What is the difference between local storage and session storage?
+ans=>sessionStorage is similar to localStorage ; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+
+===>MVC Architecture
+ans=>The MVC architecture contains the three components. These are:
+Model: It is responsible for maintaining the behavior and data of an application.
+View: It is used to display the model in the user interface.
+Controller: It acts as an interface between the Model and the View components. It takes user input, manipulates the data(model) and causes the view to update.
+
+===>difference between PUT and PATCH?
+ans=>PUT is a method of modifying resource where the client sends data that updates the entire resource .
+PATCH is a method of modifying resources where the client sends partial data that is to be updated without modifying the entire data.
+
+===>What is variables in javascript?
+ans=>Variables are containers for storing data (values).
+All JavaScript variables must be identified with unique names.
+These unique names are called identifiers.
+
+===>Data types in javascript?
+ans=>1.premitive DataType(string,number,boolean,undefine,null)
+2.non premitive DataType(object,array,regex)
+
+===>What is Objects in javascript?
+ans=>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. 
+A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
+
+===>What is Array in Javascript?
+ans=>An array is a special variable, which can hold more than one value.
+
+===>Differnce between async,await and promises?
+ans=>
+promises:-	Promise has 3 states – resolved, rejected and pending.Error handling is done using .then() or try() and .catch() methods.
+async,await:-It does not have any states. It returns a promise either resolved or rejected.Error handling is done using .try() and .catch() methods.
+
+===>What is usememo()?
+ans=>The React useMemo Hook returns a memoized value.
+Think of memoization as caching a value so that it does not need to be recalculated.
+The useMemo Hook only runs when one of its dependencies update.
+This can improve performance.
+The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+
+===>what is mounting in react?
+ans=>Mounting is the phase in which our React component mounts on the DOM (i.e., is created and inserted into the DOM). This phase comes onto the scene after the initialization phase is completed. 
+In this phase, our component renders the first time.
+
+===>what is state object?
+ans=>React components has a built-in state object.
+The state object is where you store property values that belongs to the component.
+When the state object changes, the component re-renders.
+
+===>What is unmount in React?
+ans=>Unmounting. The next phase in the lifecycle is when a component is removed from the DOM, 
+
+===>forEach() in JavaScript?
+ans=>The forEach() method executes a function once for each item in the array. The method is called on the array object that you wish to manipulate, 
+and the function to call is provided as an argument. In the code above, console. log() is invoked for each element in the array.
+
+The forEach() method is not executed for empty elements.
+The forEach() method doesn’t return new Array.
+
+===>What is annonomous function?
+ans=>We have used the function keyword, which is used when we create any function in JavaScript, and the function is assigned to a variable x using 'let'.
+Passing an anonymous function to other function as its argument 
+ex:-setTimeout(function () {  
+    console.log('Execute later after 1 second')  
+}, 1000);  
+
+===>What is recursion?
+ans=>a recursive function is calling itself for n number of times until it reaches a base case.
+
+===>Difffernce between =,== ans ===?
+ans=>= is used for assigning values to a variable in JavaScript. 
+== is used for comparison between two variables irrespective of the datatype of variable. 
+=== is used for comparision between two variables but this will check strict type, which means it will check datatype and compare two values.
+
+===>What is NaN used for JavaScript?
+ans=>In JavaScript, NaN stands for Not a Number. It represents a value which is not a valid number. It can be used to check whether a number entered is a valid number or not a number.
+OR
+In JavaScript NaN is short for "Not-a-Number". The isNaN() method returns true if a value is NaN. The isNaN() method converts the value to a number before testing it.
+
+===>The Continue Statement
+ans=>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+===>The Break Statement
+ans=>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch() statement.
+
+===>Confusing Addition & Concatenation
+ans=>Addition is about adding numbers.
+Concatenation is about adding strings.
+In JavaScript both operations use the same + operator.
+
+===>Hoisting useing var,let and const
+ans=>var declarations are globally scoped or function scoped while let and const are block scoped. ... They are all hoisted to the top of their scope. 
+But while var variables are initialized with undefined , let and const variables are not initialized.
+
+===>Differnce between fetch and axios?
+ans=>Axios																						Fetch
+Axios is a stand-alone third party package that can be easily installed.				Fetch is built into most modern browsers; no installation is required as such.
+Axios’ data contains the object.														Fetch’s body has to be stringified.
+Axios request is ok when status is 200 and statusText is ‘OK’.							Fetch request is ok when response object contains the ok property.
+Axios performs automatic transforms of JSON data.										Fetch is a two-step process when handling JSON data- first, to make the actual request; second, to call the .json() method on the response.
+Axios has the ability to intercept HTTP requests.										Fetch, by default, doesn’t provide a way to intercept requests.
+Axios has built-in support for download progress.										Fetch does not support upload progress.
+Axios has wide browser support.															Fetch only supports Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.1+ (This is known as Backward Compatibility).
+
+
+===> What are forms in React?
+ans=>React employs forms to enable users to interact with web applications.
+Using forms, users can interact with the application and enter the required information whenever needed. Form contain certain elements, such as text fields, buttons, checkboxes, radio buttons, etc
+Forms are used for many different tasks such as user authentication, searching, filtering, indexing, etc
+
+===>Explain Implicit Type Coercion in javascript.
+ans=>Implicit type coercion in javascript is automatic conversion of value from one data type to another. It takes place when the operands of an expression are of different data types.
+String coercion
+String coercion takes place while using the ‘ + ‘ operator. When a number is added to a string, the number type is always converted to the string type.
+
+===>which errors can not  be handled in error boundary react
+ans=> Event handlers. Asynchronous code (e.g., setTimeout or requestAnimationFrame callbacks) Server-side rendering.
+
+===>which errors can  be handled in error boundary react
+ans=>any JavaScript errors that occur in the component lifecycle 
+
+===>What is useReducer for?
+ans=>useReducer is used to store and update states, just like the useState Hook. It accepts a reducer function as its first parameter and the initial state as the second.
